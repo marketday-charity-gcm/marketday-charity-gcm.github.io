@@ -1,0 +1,40 @@
+name: Github Pages Astro CI
+
+on:
+  #main` ブランチにプッシュするたびにワークフローを起動する
+  #別のブランチ名を使っている場合 main` をあなたのブランチの名前に置き換えてください。
+  push:
+    branches: [ main ]
+  #GitHub の Actions タブから、このワークフローを手動で実行できるようにします。
+  workflow_dispatch:
+  
+#このジョブがレポをクローンしてページをデプロイすることを許可する
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v2          
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
+        # with:
+            #パス:.#リポジトリ内のAstroプロジェクトのルート位置です。(オプション)
+            #node-version:16#サイトを構築する際に利用するNodeのバージョンを指定します.デフォルトは16です(オプション)。
+            #package-manager:yarn#依存関係のインストールとサイトの構築に使用するNodeパッケージマネージャです。ロックファイルに基づいて自動的に検出されます。(オプション)
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
