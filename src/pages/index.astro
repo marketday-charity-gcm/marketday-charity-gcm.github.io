@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
           <h1 class="sect-mv__title font-bold leading-none">Market Day</h1>
           <p class="sect-mv__theme mt-4 leading-none">- Doctor Stranger -</p>
         </div>
-        <div class="sect-mv__flex-item -image mt-4">
+        <div class="sect-mv__flex-item -image mt-2">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" is:raw></script>
           <lottie-player src="/animation_lkgacrlw.json" background="Transparent" speed="1" style="width: 100%; aspect-ratio:1;" direction="1" mode="normal" loop autoplay></lottie-player>
         </div>
@@ -31,11 +31,11 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="font-bold text-4xl pb-2 border-b-4 border-red-500 mb-8">What is the Market Day?</h2>
         <div class="md:flex">
           <div class="grow">
-            <p>Market Day is a charity event in Greenwich College.It's organised by students in English for Business.</p>
+            <p>Market Day is a charity event in Greenwich College. It's organised by students in English for Business.</p>
             <p class="mt-4">You can buy foods, beverages and activities at the event.</p>
-            <p class="mt-4">Our slogan is "Better health, better life". Profit is going to be donate to <a href="https://msf.org.au/" class="text-blue-600 underline">Médecins Sans Frontières (Doctors Without Borders)</a></p>
+            <p class="mt-4">Our slogan is "Better health, better life". Profit is going to be donated to <a href="https://msf.org.au/" class="text-blue-600 underline">Médecins Sans Frontières (Doctors Without Borders)</a></p>
           </div>
-          <div class="grow-0 shrink-0 min-w-[280px] flex justify-center align-center p-4">
+          <div class="grow-0 shrink-0 min-w-[280px] flex justify-center align-center p-4 mt-4 md:mt-0">
             <a href="https://msf.org.au/">
               <img src="/logo_msf.png" width="280" alt="">
             </a>
@@ -51,7 +51,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <section class="sect-menu py-8 bg-white">
+    <section class="sect-menu py-8 pb-12 bg-white">
       <div class="container">
         <h2 class="font-bold text-4xl pb-2 border-b-4 border-red-500 mb-8">Menu</h2>
         <p>comming soon...</p>
@@ -63,7 +63,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
 	.sect-mv {
     width: 100vw;
-    height: 90vh;
+    min-height: 85vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -79,7 +79,9 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .sect-mv__flex-item.-image {
+    width: 100%;
     max-width: 400px;
+    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
