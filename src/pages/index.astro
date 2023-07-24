@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Market Day on 09 Aug 2023 at Greenwich College Melbourne">
+<Layout title="Market Day Greenwich College Melbourne">
 	<main>
-    <div class="sect-mv container pt-12 pb-8">
-      <div class="sect-mv__flex-container">
+    <div class="sect-mv pt-12 pb-8">
+      <div class="sect-mv__flex-container container">
         <div class="sect-mv__flex-item -header">
           <h1 class="sect-mv__title font-bold leading-none">Market Day</h1>
           <p class="sect-mv__theme mt-4 leading-none font-script">- Doctor Stranger -</p>
@@ -20,15 +20,13 @@ import Layout from '../layouts/Layout.astro';
             <p class="sect-mv__place">120 Spencer St. Level 8</p>
             <p class="sect-mv__time">9 am - 3 pm</p>
           </div>
-          </div>
+        </div>
       </div>
-      
-      
     </div>
   
 		<section class="sect-about bg-white py-8 pt-12">
       <div class="container">
-        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6">What is the Market Day?</h2>
+        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6"><span class="icon-info mr-2 text-red-600"></span>What is the Market Day?</h2>
         <div class="md:flex">
           <div class="grow">
             <p>Market Day is a charity event in Greenwich College. It's organised by students in English for Business.</p>
@@ -37,24 +35,85 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="grow-0 shrink-0 min-w-[280px] flex justify-center align-center p-4 mt-4 md:mt-0">
             <a href="https://msf.org.au/">
-              <img src="/logo_msf.png" width="280" alt="">
+              <img src="/logo-msf.png" width="280" alt="">
             </a>
           </div>
+        </div>
+        <div class="mt-8 p-4 rounded-lg shadow-lg bg-red-50">
+          <p class="text-red-700 flex gap-1 align-start"><span class="icon-info mr-2 pt-1"></span><span>Please do not bring lunch on, we will provide you with delicious menus with affordable price.</span></p>
+          <p class="mt-2 text-red-700 flex gap-1 align-start"><span class="icon-info mr-2 pt-1"></span><span>Please prepare CASH if you are inconvenience, we also have PAY ID for you.</span></p>
         </div>
       </div>
     </section>
 
     <section class="sect-menu py-8 bg-white">
       <div class="container">
-        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6">Activity</h2>
-        <p>comming soon...</p>
+        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6"><span class="icon-dice mr-2 text-red-600"></span>Activity</h2>
+        <dl class="activity-list">
+          <div class="activity-list__set">
+            <dt>Bottles &amp; rings</dt>
+            <dd>comming soon...</dd>
+          </div>
+          <div class="activity-list__set">
+            <dt>Bottles flip challenge</dt>
+            <dd>comming soon...</dd>
+          </div>
+          <div class="activity-list__set">
+            <dt>Wishing tree</dt>
+            <dd>comming soon...</dd>
+          </div>
+          <div class="activity-list__set">
+            <dt>Raffle</dt>
+            <dd>comming soon...</dd>
+          </div>
+          <div class="activity-list__set">
+            <dt>Photo booth</dt>
+            <dd>comming soon...</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
     <section class="sect-menu py-8 pb-12 bg-white">
       <div class="container">
-        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6">Menu</h2>
-        <p>comming soon...</p>
+        <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6"><span class="icon-spoon-knife mr-2 text-red-600"></span>Menu</h2>
+
+        <div class="">
+          <div class="mt-12">
+            <h3 class="text-xl text-red-600 font-bold text-center md:text-left">Food</h3>
+            <dl class="menu-list md:flex gap-8 text-center">
+              <div class="menu-list__set">
+                <dt>Pad Thai</dt>
+                <dd><div class="text-center"><img src="/menu/pad-thai.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+              <div class="menu-list__set">
+                <dt>Yogurt Fruits</dt>
+                <dd><div class="text-center"><img src="/menu/yogurt-fruits.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+              <div class="menu-list__set">
+                <dt>Toast (Butter + Sugar)</dt>
+                <dd><div class="text-center"><img src="/menu/toast.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="mt-12">
+            <h3 class="text-xl text-red-600 font-bold text-center md:text-left">Beverage</h3>
+            <dl class="menu-list md:flex gap-8 text-center">
+              <div class="menu-list__set">
+                <dt>Thai Milk Tea</dt>
+                <dd><div class="text-center"><img src="/menu/thai-milk-tea.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+              <div class="menu-list__set">
+                <dt>Lemon Lime Bitter</dt>
+                <dd><div class="text-center"><img src="/menu/lemon-lime-bitter.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+              <div class="menu-list__set">
+                <dt>Red Syrub Soda</dt>
+                <dd><div class="text-center"><img src="/menu/red-syrub-soda.jpg" width="200" height="200" alt=""></div></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
 	</main>
@@ -113,5 +172,25 @@ import Layout from '../layouts/Layout.astro';
 
   .sect-mv__time {
     font-size: clamp(13px, 3vw, 20px);
+  }
+
+  .activity-list__set {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+  }
+
+  .activity-list__set dt {
+    font-weight: bold;
+    min-width: 12em;
+  }
+
+  .menu-list__set {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .menu-list__set img {
+    margin: auto;
   }
 </style>
