@@ -32,10 +32,20 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
-    <footer class="bg-gray-200 p-2">
-      <div class="container text-center">
-        <small>© Greenwich English College PTY LTD also trades as Greenwich Management College 2023</small>
+    <footer class="pt-12">
+      <div class="container grid sm:grid-cols-2 justify-center max-w-[640px] mx-auto gap-8">
+        <div class="span-1 flex justify-center">
+          <a href="https://www.instagram.com/marketdaycharitygcm/" class="text-center flex justify-center items-center flex-col gap-2 hover:opacity-60 transition-opacity duration-200 max-w-[240px]"><span class="icon-instagram mr-1 block text-[48px]"></span><span class="text-2xl">@marketdaycharitygcm</span></a>
+        </div>
+        <div class="span-1 flex justify-center pt-1">
+          <a href="https://www.greenwichcollege.edu.au/" class="hover:opacity-60 transition-opacity duration-200 flex justify-center items-center max-w-[280px] text-center"><img src="/logo-gc.png" alt="Greenwich College"></a></div>
+        <p class="text-md">
       </div>
+      <div class="bg-gray-200 p-2 mt-8">
+        <p class="container text-center">
+          <small class="mt-2">© Greenwich English College PTY LTD also trades as Greenwich Management College 2023</small>
+        </div>
+      </p>
     </footer>
 	</body>
 </html>
@@ -55,7 +65,7 @@ const { title } = Astro.props;
   }
 
   .container {
-    max-width: 960px;
+    max-width: 960px !important;
     margin: auto;
     padding-left: 3%;
     padding-right: 3%;
