@@ -13,6 +13,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="sect-mv__flex-item -image mt-2">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" is:raw></script>
           <lottie-player src="/nurse-red.json" background="Transparent" speed="1" style="width: 100%; aspect-ratio:1;" direction="1" mode="normal" loop autoplay></lottie-player>
+          <p class="sect-mv__slogan"><span class="sect-mv__slogan-core">Better health, better life</span></p>
         </div>
         <div class="sect-mv__flex-item -footer">
           <div class="bg-white w-max py-2 px-6 rounded-lg shadow-md">
@@ -153,9 +154,51 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+  }
+
+  .sect-mv__slogan {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    margin: auto;
+    width: 8em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 2em;
+    transform: rotate(30deg);
+    z-index: 1;
+    font-size: 12px;
+    /* animation: float 1100ms ease-out 400ms alternate infinite; */
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0.3em) rotate(30deg);
+    }
+    100% {
+      transform: translateY(0) rotate(30deg);
+    }
+  }
+
+  .sect-mv__slogan::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 1em 0.5em 0 0.5em;
+    border-color: #fff rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+    position: absolute;
+    bottom: -1em;
+    left: 25%;
   }
 
   .sect-mv__title {
+    position: relative;
+    z-index: 2;
     font-size: clamp(18px, 12vw, 100px);
     text-shadow:
       1px 0 0 white,
@@ -169,6 +212,8 @@ import Layout from '../layouts/Layout.astro';
   }
   .sect-mv__theme {
     font-size: clamp(16px, 6vw, 60px);
+    position: relative;
+    z-index: 2;
   }
 
   .sect-mv__date {
