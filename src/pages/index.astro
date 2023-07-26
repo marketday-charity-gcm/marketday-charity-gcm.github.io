@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '@splidejs/splide/css';
+import '@splidejs/splide/css/core';
 ---
 
 <Layout title="Market Day Greenwich College Melbourne">
@@ -8,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="sect-mv__flex-container container">
         <div class="sect-mv__flex-item -header">
           <h1 class="sect-mv__title font-bold leading-none">Market Day</h1>
-          <p class="sect-mv__theme mt-4 leading-none font-script">- Doctor Stranger -</p>
+          <p class="sect-mv__theme mt-4 leading-none font-script">- Doctor Strange -</p>
         </div>
         <div class="sect-mv__flex-item -image mt-2">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" is:raw></script>
@@ -54,32 +56,32 @@ import Layout from '../layouts/Layout.astro';
           <div class="activity-list__set">
             <dt>Ring toss game</dt>
             <dd>
-              <p>The game consists of glass bottles lined up side-by-side. The aim of the game is to toss a ring and have it land over the mouth and neck of one of the bottles. If you win 2/3 bottles will earn you a chance of lucky draw tree game.</p>
+              <p>The game consists of glass bottles lined up side-by-side. The aim of the game is to toss a ring and have it land over the mouth and neck of one of the bottles. If you get 2/3 bottles, you will win a chance on the Lucky Draw Tree.</p>
             </dd>
           </div>
           <div class="activity-list__set">
             <dt>3 bottles flip game</dt>
             <dd>
-              <p>Flip the bottle is a game where you have to flip a bottle, and have it land on the table perfectly. After flipping and winning 3 victories in a row will earn you a chance of lucky draw tree game.</p>
+              <p>Flip the bottle is a game where you have to flip a bottle, and have it land on the table perfectly. After flipping and winning 3 times in a row, you will win a chance on the Lucky Draw Tree.</p>
           </dd>
           </div>
           <div class="activity-list__set">
-            <dt>Lucky draw tree game</dt>
+            <dt>Lucky Draw Tree</dt>
             <dd>
-              <p>A game in which prizes are covered up and tie lots on the tree so that contestants can draw the lots from the tree and randomly draw out a prize.</p>
+              <p>A game in which prizes are concealed in an envelope and tied on the tree. So that, contestants select an evelope from the tree and win whatever prize has been concealed.</p>
               <h3 class="font-bold mt-4">Prize</h3>
               <ol class="list-inside list-decimal mt-2">
-                <li>Miki ($50)</li>
-                <li>Cinema ticket ($30)</li>
+                <li>Miki ($150)</li>
+                <li>Cinema tickets ($30 2x)</li>
                 <li>Uber Eats voucher ($20)</li>
                 <li>Snack</li>
-                <li>Chocolate</li>
+                <li>Chocolate and coffee</li>
               </ol>
             </dd>
           </div>
           <div class="activity-list__set">
             <dt>Photo booth</dt>
-            <dd>comming soon...</dd>
+            <dd>coming soon...</dd>
           </div>
         </dl>
       </div>
@@ -90,15 +92,52 @@ import Layout from '../layouts/Layout.astro';
     <section class="sect-menu py-8 bg-white">
       <div class="container">
         <h2 class="font-bold text-2xl md:text-3xl pb-1 border-b-4 border-red-500 mb-6"><span class="icon-ticket mr-2 text-red-600"></span>Raffle</h2>
-        <h3 class="text-xl text-red-600 font-bold text-left mt-8">Overview</h3>
-        <p class="mt-2">A raffle is a gambling competition in which people obtain numbered tickets, each of which has the chance of winning a prize. At a set time, the winners are drawn at random from a container holding a copy of each number.</p>
 
-        <h3 class="text-xl text-red-600 font-bold text-left mt-8">Prize</h3>
-        <ol class="list-inside list-decimal mt-2">
-          <li>AirPods</li>
-          <li>Headphone</li>
-          <li>Coles gift card</li>
-        </ol>
+        <h3 class="text-xl text-red-600 font-bold text-left mt-8">Overview</h3>
+        <p class="mt-2">A raffle is a way of raising money in which people obtain numbered tickets, each of which has the chance of winning a prize. At a set time, the winners are drawn at random from a container holding a copy of each number. The raffle will be drawn on thirsday 10 August level 14 cafe at 10:30</p>
+
+        <div class="md:flex gap-8">
+          <div>
+            <h3 class="text-xl text-red-600 font-bold text-left mt-8">Price</h3>
+            <p class="mt-2">$2 each OR 3 for $5 (SAVE $1)</p>
+
+            <h3 class="text-xl text-red-600 font-bold text-left mt-8">Prize</h3>
+            <ol class="list-inside list-decimal mt-2">
+              <li>AirPods(2nd generation)</li>
+              <li>Headphone(Sony)</li>
+              <li>Coles gift card</li>
+            </ol>
+          </div>
+
+          <div class="grow-0 shrink-0 max-w-[480px] min-w-[320px] mt-8 mx-auto">
+            <div class="splide" aria-label="Prize examples">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="slide-content">
+                      <img src="/prize/AirPods2.jpg" alt="AirPods 2nd generation">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="slide-content">
+                      <img src="/prize/SonyHeadphone.jpg" alt="Sony Headphone">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="slide-content">
+                      <img src="/prize/ColseGiftCard.jpg" alt="Colse gift card">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <script>
+              import { Splide } from '@splidejs/splide';
+              new Splide( '.splide' ).mount();
+            </script>
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -112,15 +151,15 @@ import Layout from '../layouts/Layout.astro';
             <dl class="menu-list md:flex gap-8 text-center">
               <div class="menu-list__set">
                 <dt>Pad Thai</dt>
-                <dd><div class="text-center"><img src="/menu/pad-thai.jpg" width="200" height="200" alt=""></div></dd>
+                <dd><div class="text-center"><img src="/menu/pad-thai.jpg" width="240" height="240" alt=""></div></dd>
               </div>
               <div class="menu-list__set">
-                <dt>Yogurt Fruits</dt>
-                <dd><div class="text-center"><img src="/menu/yogurt-fruits.jpg" width="200" height="200" alt=""></div></dd>
+                <dt>Fruits Yogurt</dt>
+                <dd><div class="text-center"><img src="/menu/yogurt-fruits.jpg" width="240" height="240" alt=""></div></dd>
               </div>
               <div class="menu-list__set">
                 <dt>Toast (Butter + Sugar)</dt>
-                <dd><div class="text-center"><img src="/menu/toast.jpg" width="200" height="200" alt=""></div></dd>
+                <dd><div class="text-center"><img src="/menu/toast.jpg" width="240" height="240" alt=""></div></dd>
               </div>
             </dl>
           </div>
@@ -129,15 +168,15 @@ import Layout from '../layouts/Layout.astro';
             <dl class="menu-list md:flex gap-8 text-center">
               <div class="menu-list__set">
                 <dt>Thai Milk Tea</dt>
-                <dd><div class="text-center"><img src="/menu/thai-milk-tea.jpg" width="200" height="200" alt=""></div></dd>
+                <dd><div class="text-center"><img src="/menu/thai-milk-tea.jpg" width="240" height="240" alt=""></div></dd>
               </div>
               <div class="menu-list__set">
                 <dt>Lemon Lime Bitter</dt>
-                <dd><div class="text-center"><img src="/menu/lemon-lime-bitter.jpg" width="200" height="200" alt=""></div></dd>
+                <dd><div class="text-center"><img src="/menu/lemon-lime-bitter.jpg" width="240" height="240" alt=""></div></dd>
               </div>
               <div class="menu-list__set">
                 <dt>Red Syrup Soda</dt>
-                <dd><div class="text-center"><img src="/menu/red-syrub-soda.jpg" width="200" height="200" alt=""></div></dd>
+                <dd><div class="text-center"><img src="/menu/red-syrub-soda.jpg" width="240" height="240" alt=""></div></dd>
               </div>
             </dl>
           </div>
@@ -274,5 +313,17 @@ import Layout from '../layouts/Layout.astro';
   }
   .menu-list__set img {
     margin: auto;
+  }
+
+  .slide-content {
+    width: 240px;
+    height: 240px;
+    margin: auto;
+  }
+
+  .slide-content > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 </style>
