@@ -133,7 +133,9 @@ import '@splidejs/splide/css/core';
             </div>
             <script>
               import { Splide } from '@splidejs/splide';
-              new Splide( '.splide' ).mount();
+              new Splide( '.splide', {
+                autoplay: true
+              } ).mount();
             </script>
           </div>
         </div>
