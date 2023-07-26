@@ -153,16 +153,25 @@ import '@splidejs/splide/css/core';
             <h3 class="text-xl text-red-600 font-bold text-center md:text-left">Food</h3>
             <dl class="menu-list md:flex gap-8 text-center">
               <div class="menu-list__set">
-                <dt>Pad Thai</dt>
-                <dd><div class="text-center"><img src="/menu/pad-thai.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Pad Thai</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/pad-thai.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
               <div class="menu-list__set">
-                <dt>Fruits Yogurt</dt>
-                <dd><div class="text-center"><img src="/menu/yogurt-fruits.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Fruits Yogurt</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/yogurt-fruits.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
               <div class="menu-list__set">
-                <dt>Toast (Butter + Sugar)</dt>
-                <dd><div class="text-center"><img src="/menu/toast.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Toast (Butter + Sugar)</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/toast.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
             </dl>
           </div>
@@ -170,16 +179,25 @@ import '@splidejs/splide/css/core';
             <h3 class="text-xl text-red-600 font-bold text-center md:text-left">Beverage</h3>
             <dl class="menu-list md:flex gap-8 text-center">
               <div class="menu-list__set">
-                <dt>Thai Milk Tea</dt>
-                <dd><div class="text-center"><img src="/menu/thai-milk-tea.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Thai Milk Tea</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/thai-milk-tea.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
               <div class="menu-list__set">
-                <dt>Lemon Lime Bitter</dt>
-                <dd><div class="text-center"><img src="/menu/lemon-lime-bitter.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Lemon Lime Bitter</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/lemon-lime-bitter.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
               <div class="menu-list__set">
-                <dt>Red Syrup Soda</dt>
-                <dd><div class="text-center"><img src="/menu/red-syrub-soda.jpg" width="240" height="240" alt=""></div></dd>
+                <dt><span>Red Syrup Soda</span></dt>
+                <dd>
+                  <div class="text-center"><img src="/menu/red-syrub-soda.jpg" width="240" height="240" alt=""></div>
+                  <span class="menu-list__price">$2</span>
+                </dd>
               </div>
             </dl>
           </div>
@@ -310,12 +328,34 @@ import '@splidejs/splide/css/core';
   }
 
   .menu-list__set {
-    margin-top: 1em;
     display: flex;
     flex-flow: column-reverse;
+    position: relative;
+    max-width: 240px;
+    margin: 2em auto auto;
+
+    @screen sm {
+      margin: 1em 0 0;
+    }
   }
   .menu-list__set img {
     margin: auto;
+  }
+
+  .menu-list__set dt {
+    background: #000;
+    color: white;
+  }
+
+  .menu-list__price {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: theme(colors.white);
+    padding: 0.3em 0.6em;
+    font-size: 1.2rem;
+    visibility: hidden;
   }
 
   .slide-content {
