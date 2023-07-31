@@ -56,6 +56,7 @@ import '@splidejs/splide/css/core';
           <div class="activity-list__set">
             <dt>
               <span class="activity-list__title block">Ring toss game</span>
+              <span class="activity-list__price block">1 game for $2</span>
             </dt>
             <dd class="sm:flex gap-4">
               <p>The game consists of glass bottles lined up side-by-side. The aim of the game is to toss a ring and have it land over the mouth and neck of one of the bottles. If you get 2/3 bottles, you will win a chance on the Lucky Draw Tree.</p>
@@ -65,6 +66,7 @@ import '@splidejs/splide/css/core';
           <div class="activity-list__set">
             <dt>
               <span class="activity-list__title block">3 bottles flip game</span>
+              <span class="activity-list__price block">1 game for $2</span>
             </dt>
             <dd class="sm:flex gap-4">
               <p>Flip the bottle is a game where you have to flip a bottle, and have it land on the table perfectly. After flipping and winning 3 times in a row, you will win a chance on the Lucky Draw Tree.</p>
@@ -74,6 +76,7 @@ import '@splidejs/splide/css/core';
           <div class="activity-list__set">
             <dt>
               <span class="activity-list__title block">Lucky Draw Tree</span>
+              <span class="activity-list__price block">You can try it if you win the above games</span>
             </dt>
             <dd class="sm:flex gap-4">
               <div>
@@ -373,9 +376,15 @@ import '@splidejs/splide/css/core';
     }
   }
 
-
   .activity-list__set > dt {
+    min-width: 160px;
+  }
+
+  .activity-list__title {
     font-weight: bold;
+  }
+  .activity-list__price {
+    font-weight: normal;
     min-width: 160px;
   }
 
